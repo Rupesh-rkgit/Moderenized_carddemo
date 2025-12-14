@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface TransactionRepository extends JpaRepository<Transaction, String> {
+    java.util.List<Transaction> findByTransactionCardNumber(String transactionCardNumber);
 }
