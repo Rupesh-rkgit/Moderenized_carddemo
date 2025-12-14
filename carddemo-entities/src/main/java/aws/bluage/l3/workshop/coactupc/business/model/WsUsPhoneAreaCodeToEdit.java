@@ -1,0 +1,1222 @@
+package aws.bluage.l3.workshop.coactupc.business.model;
+
+import com.netfective.bluage.gapwalk.datasimplifier.configuration.Configuration;
+import com.netfective.bluage.gapwalk.datasimplifier.data.RecordAdaptable;
+import com.netfective.bluage.gapwalk.datasimplifier.data.structure.Elementary;
+import com.netfective.bluage.gapwalk.datasimplifier.data.structure.Group;
+import com.netfective.bluage.gapwalk.datasimplifier.entity.ConditionReference;
+import com.netfective.bluage.gapwalk.datasimplifier.entity.ElementaryRangeReference;
+import com.netfective.bluage.gapwalk.datasimplifier.entity.RecordEntity;
+import com.netfective.bluage.gapwalk.datasimplifier.metadata.ConditionName;
+import com.netfective.bluage.gapwalk.datasimplifier.metadata.type.AlphanumericType;
+/**
+ * Data simplifier entity WsUsPhoneAreaCodeToEdit.
+<pre>
+ * 
+ * Legacy Documentation:<br>
+ *  <br>
+ *   Ver: CardDemo_v1.0-15-g27d6c6f-68 Date: 2022-07-19 23:16:00 CDT<br>
+ *  <br>
+ *  ****************************************************************<br>
+ *  Lookups<br>
+ *  ****************************************************************<br>
+ *  North America Phone Area codes<br>
+ *  ****************************************************************<br>
+ *  Lookup code repository<br>
+ *         1) North america phone area codes<br>
+ *         2) United States - state codes<br>
+ *         3) United States - state + first 2 of zip<br>
+ *  <br>
+ *  ****************************************************************<br>
+ *   Copyright Amazon.com, Inc. or its affiliates.<br>
+ *   All Rights Reserved.<br>
+ *  <br>
+ *   Licensed under the Apache License, Version 2.0 (the "License").<br>
+ *   You may not use this file except in compliance with the License.<br>
+ *   You may obtain a copy of the License at<br>
+ *  <br>
+ *      http://www.apache.org/licenses/LICENSE-2.0<br>
+ *  <br>
+ *   Unless required by applicable law or agreed to in writing,<br>
+ *   software distributed under the License is distributed on an<br>
+ *   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,<br>
+ *   either express or implied. See the License for the specific<br>
+ *   language governing permissions and limitations under the License<br>
+ *  ****************************************************************<br>
+</pre>
+ * 
+ * <p>About 'wsUsPhoneAreaCodeToEdit' field, <br>
+ *  <br>
+ *   Ver: CardDemo_v1.0-15-g27d6c6f-68 Date: 2022-07-19 23:16:00 CDT<br>
+ *  <br>
+ *  ****************************************************************<br>
+ *  Lookups<br>
+ *  ****************************************************************<br>
+ *  North America Phone Area codes<br>
+ *  ****************************************************************<br>
+ *  Lookup code repository<br>
+ *         1) North america phone area codes<br>
+ *         2) United States - state codes<br>
+ *         3) United States - state + first 2 of zip<br>
+ *  <br>
+ *  ****************************************************************<br>
+ *   Copyright Amazon.com, Inc. or its affiliates.<br>
+ *   All Rights Reserved.<br>
+ *  <br>
+ *   Licensed under the Apache License, Version 2.0 (the "License").<br>
+ *   You may not use this file except in compliance with the License.<br>
+ *   You may obtain a copy of the License at<br>
+ *  <br>
+ *      http://www.apache.org/licenses/LICENSE-2.0<br>
+ *  <br>
+ *   Unless required by applicable law or agreed to in writing,<br>
+ *   software distributed under the License is distributed on an<br>
+ *   "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,<br>
+ *   either express or implied. See the License for the specific<br>
+ *   language governing permissions and limitations under the License<br>
+ *  ****************************************************************<br></p>
+ * 
+ * <p>About 'validPhoneAreaCode' field, <br>
+ *  ****************************************************************<br>
+ *  North America Phone area codes List obtained from North America<br>
+ *  Numbering Plan Administrator *nanpa<br>
+ *  https://nationalnanpa.com/nanp1/npa_report.csv<br>
+ *  ****************************************************************<br></p>
+ * 
+ * <p>About 'validGeneralPurpCode' field, <br>
+ * </p>
+ * 
+ * <p>About 'validEasyRecogAreaCode' field, <br>
+ * </p>
+ * 
+ * @see RecordEntity
+ */
+public class WsUsPhoneAreaCodeToEdit extends RecordEntity {
+
+	private final Group root = new Group(getData()); 
+	
+	/**
+	 * 
+	 * Ver: CardDemo_v1.0-15-g27d6c6f-68 Date: 2022-07-19 23:16:00 CDT
+	 * 
+	 * ****************************************************************
+	 * Lookups
+	 * ****************************************************************
+	 * North America Phone Area codes
+	 * ****************************************************************
+	 * Lookup code repository
+	 * 1) North america phone area codes
+	 * 2) United States - state codes
+	 * 3) United States - state + first 2 of zip
+	 * 
+	 * ****************************************************************
+	 * Copyright Amazon.com, Inc. or its affiliates.
+	 * All Rights Reserved.
+	 * 
+	 * Licensed under the Apache License, Version 2.0 (the "License").
+	 * You may not use this file except in compliance with the License.
+	 * You may obtain a copy of the License at
+	 * 
+	 * http://www.apache.org/licenses/LICENSE-2.0
+	 * 
+	 * Unless required by applicable law or agreed to in writing,
+	 * software distributed under the License is distributed on an
+	 * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND,
+	 * either express or implied. See the License for the specific
+	 * language governing permissions and limitations under the License
+	 * ****************************************************************
+	 */
+	private final Elementary wsUsPhoneAreaCodeToEdit = new Elementary(root,new AlphanumericType(3));
+	private final ConditionName validPhoneAreaCode=new ConditionName(wsUsPhoneAreaCodeToEdit,"201",
+	"202",
+	"203",
+	"204",
+	"205",
+	"206",
+	"207",
+	"208",
+	"209",
+	"210",
+	"212",
+	"213",
+	"214",
+	"215",
+	"216",
+	"217",
+	"218",
+	"219",
+	"220",
+	"223",
+	"224",
+	"225",
+	"226",
+	"228",
+	"229",
+	"231",
+	"234",
+	"236",
+	"239",
+	"240",
+	"242",
+	"246",
+	"248",
+	"249",
+	"250",
+	"251",
+	"252",
+	"253",
+	"254",
+	"256",
+	"260",
+	"262",
+	"264",
+	"267",
+	"268",
+	"269",
+	"270",
+	"272",
+	"276",
+	"279",
+	"281",
+	"284",
+	"289",
+	"301",
+	"302",
+	"303",
+	"304",
+	"305",
+	"306",
+	"307",
+	"308",
+	"309",
+	"310",
+	"312",
+	"313",
+	"314",
+	"315",
+	"316",
+	"317",
+	"318",
+	"319",
+	"320",
+	"321",
+	"323",
+	"325",
+	"326",
+	"330",
+	"331",
+	"332",
+	"334",
+	"336",
+	"337",
+	"339",
+	"340",
+	"341",
+	"343",
+	"345",
+	"346",
+	"347",
+	"351",
+	"352",
+	"360",
+	"361",
+	"364",
+	"365",
+	"367",
+	"368",
+	"380",
+	"385",
+	"386",
+	"401",
+	"402",
+	"403",
+	"404",
+	"405",
+	"406",
+	"407",
+	"408",
+	"409",
+	"410",
+	"412",
+	"413",
+	"414",
+	"415",
+	"416",
+	"417",
+	"418",
+	"419",
+	"423",
+	"424",
+	"425",
+	"430",
+	"431",
+	"432",
+	"434",
+	"435",
+	"437",
+	"438",
+	"440",
+	"441",
+	"442",
+	"443",
+	"445",
+	"447",
+	"448",
+	"450",
+	"458",
+	"463",
+	"464",
+	"469",
+	"470",
+	"473",
+	"474",
+	"475",
+	"478",
+	"479",
+	"480",
+	"484",
+	"501",
+	"502",
+	"503",
+	"504",
+	"505",
+	"506",
+	"507",
+	"508",
+	"509",
+	"510",
+	"512",
+	"513",
+	"514",
+	"515",
+	"516",
+	"517",
+	"518",
+	"519",
+	"520",
+	"530",
+	"531",
+	"534",
+	"539",
+	"540",
+	"541",
+	"548",
+	"551",
+	"559",
+	"561",
+	"562",
+	"563",
+	"564",
+	"567",
+	"570",
+	"571",
+	"572",
+	"573",
+	"574",
+	"575",
+	"579",
+	"580",
+	"581",
+	"582",
+	"585",
+	"586",
+	"587",
+	"601",
+	"602",
+	"603",
+	"604",
+	"605",
+	"606",
+	"607",
+	"608",
+	"609",
+	"610",
+	"612",
+	"613",
+	"614",
+	"615",
+	"616",
+	"617",
+	"618",
+	"619",
+	"620",
+	"623",
+	"626",
+	"628",
+	"629",
+	"630",
+	"631",
+	"636",
+	"639",
+	"640",
+	"641",
+	"646",
+	"647",
+	"649",
+	"650",
+	"651",
+	"656",
+	"657",
+	"658",
+	"659",
+	"660",
+	"661",
+	"662",
+	"664",
+	"667",
+	"669",
+	"670",
+	"671",
+	"672",
+	"678",
+	"680",
+	"681",
+	"682",
+	"683",
+	"684",
+	"689",
+	"701",
+	"702",
+	"703",
+	"704",
+	"705",
+	"706",
+	"707",
+	"708",
+	"709",
+	"712",
+	"713",
+	"714",
+	"715",
+	"716",
+	"717",
+	"718",
+	"719",
+	"720",
+	"721",
+	"724",
+	"725",
+	"726",
+	"727",
+	"731",
+	"732",
+	"734",
+	"737",
+	"740",
+	"742",
+	"743",
+	"747",
+	"753",
+	"754",
+	"757",
+	"758",
+	"760",
+	"762",
+	"763",
+	"765",
+	"767",
+	"769",
+	"770",
+	"771",
+	"772",
+	"773",
+	"774",
+	"775",
+	"778",
+	"779",
+	"780",
+	"781",
+	"782",
+	"784",
+	"785",
+	"786",
+	"787",
+	"801",
+	"802",
+	"803",
+	"804",
+	"805",
+	"806",
+	"807",
+	"808",
+	"809",
+	"810",
+	"812",
+	"813",
+	"814",
+	"815",
+	"816",
+	"817",
+	"818",
+	"819",
+	"820",
+	"825",
+	"826",
+	"828",
+	"829",
+	"830",
+	"831",
+	"832",
+	"838",
+	"839",
+	"840",
+	"843",
+	"845",
+	"847",
+	"848",
+	"849",
+	"850",
+	"854",
+	"856",
+	"857",
+	"858",
+	"859",
+	"860",
+	"862",
+	"863",
+	"864",
+	"865",
+	"867",
+	"868",
+	"869",
+	"870",
+	"872",
+	"873",
+	"876",
+	"878",
+	"901",
+	"902",
+	"903",
+	"904",
+	"905",
+	"906",
+	"907",
+	"908",
+	"909",
+	"910",
+	"912",
+	"913",
+	"914",
+	"915",
+	"916",
+	"917",
+	"918",
+	"919",
+	"920",
+	"925",
+	"928",
+	"929",
+	"930",
+	"931",
+	"934",
+	"936",
+	"937",
+	"938",
+	"939",
+	"940",
+	"941",
+	"943",
+	"945",
+	"947",
+	"948",
+	"949",
+	"951",
+	"952",
+	"954",
+	"956",
+	"959",
+	"970",
+	"971",
+	"972",
+	"973",
+	"978",
+	"979",
+	"980",
+	"983",
+	"984",
+	"985",
+	"986",
+	"989",
+	"200",
+	"211",
+	"222",
+	"233",
+	"244",
+	"255",
+	"266",
+	"277",
+	"288",
+	"299",
+	"300",
+	"311",
+	"322",
+	"333",
+	"344",
+	"355",
+	"366",
+	"377",
+	"388",
+	"399",
+	"400",
+	"411",
+	"422",
+	"433",
+	"444",
+	"455",
+	"466",
+	"477",
+	"488",
+	"499",
+	"500",
+	"511",
+	"522",
+	"533",
+	"544",
+	"555",
+	"566",
+	"577",
+	"588",
+	"599",
+	"600",
+	"611",
+	"622",
+	"633",
+	"644",
+	"655",
+	"666",
+	"677",
+	"688",
+	"699",
+	"700",
+	"711",
+	"722",
+	"733",
+	"744",
+	"755",
+	"766",
+	"777",
+	"788",
+	"799",
+	"800",
+	"811",
+	"822",
+	"833",
+	"844",
+	"855",
+	"866",
+	"877",
+	"888",
+	"899",
+	"900",
+	"911",
+	"922",
+	"933",
+	"944",
+	"955",
+	"966",
+	"977",
+	"988",
+	"999");
+	private final ConditionName validGeneralPurpCode=new ConditionName(wsUsPhoneAreaCodeToEdit,"201",
+	"202",
+	"203",
+	"204",
+	"205",
+	"206",
+	"207",
+	"208",
+	"209",
+	"210",
+	"212",
+	"213",
+	"214",
+	"215",
+	"216",
+	"217",
+	"218",
+	"219",
+	"220",
+	"223",
+	"224",
+	"225",
+	"226",
+	"228",
+	"229",
+	"231",
+	"234",
+	"236",
+	"239",
+	"240",
+	"242",
+	"246",
+	"248",
+	"249",
+	"250",
+	"251",
+	"252",
+	"253",
+	"254",
+	"256",
+	"260",
+	"262",
+	"264",
+	"267",
+	"268",
+	"269",
+	"270",
+	"272",
+	"276",
+	"279",
+	"281",
+	"284",
+	"289",
+	"301",
+	"302",
+	"303",
+	"304",
+	"305",
+	"306",
+	"307",
+	"308",
+	"309",
+	"310",
+	"312",
+	"313",
+	"314",
+	"315",
+	"316",
+	"317",
+	"318",
+	"319",
+	"320",
+	"321",
+	"323",
+	"325",
+	"326",
+	"330",
+	"331",
+	"332",
+	"334",
+	"336",
+	"337",
+	"339",
+	"340",
+	"341",
+	"343",
+	"345",
+	"346",
+	"347",
+	"351",
+	"352",
+	"360",
+	"361",
+	"364",
+	"365",
+	"367",
+	"368",
+	"380",
+	"385",
+	"386",
+	"401",
+	"402",
+	"403",
+	"404",
+	"405",
+	"406",
+	"407",
+	"408",
+	"409",
+	"410",
+	"412",
+	"413",
+	"414",
+	"415",
+	"416",
+	"417",
+	"418",
+	"419",
+	"423",
+	"424",
+	"425",
+	"430",
+	"431",
+	"432",
+	"434",
+	"435",
+	"437",
+	"438",
+	"440",
+	"441",
+	"442",
+	"443",
+	"445",
+	"447",
+	"448",
+	"450",
+	"458",
+	"463",
+	"464",
+	"469",
+	"470",
+	"473",
+	"474",
+	"475",
+	"478",
+	"479",
+	"480",
+	"484",
+	"501",
+	"502",
+	"503",
+	"504",
+	"505",
+	"506",
+	"507",
+	"508",
+	"509",
+	"510",
+	"512",
+	"513",
+	"514",
+	"515",
+	"516",
+	"517",
+	"518",
+	"519",
+	"520",
+	"530",
+	"531",
+	"534",
+	"539",
+	"540",
+	"541",
+	"548",
+	"551",
+	"559",
+	"561",
+	"562",
+	"563",
+	"564",
+	"567",
+	"570",
+	"571",
+	"572",
+	"573",
+	"574",
+	"575",
+	"579",
+	"580",
+	"581",
+	"582",
+	"585",
+	"586",
+	"587",
+	"601",
+	"602",
+	"603",
+	"604",
+	"605",
+	"606",
+	"607",
+	"608",
+	"609",
+	"610",
+	"612",
+	"613",
+	"614",
+	"615",
+	"616",
+	"617",
+	"618",
+	"619",
+	"620",
+	"623",
+	"626",
+	"628",
+	"629",
+	"630",
+	"631",
+	"636",
+	"639",
+	"640",
+	"641",
+	"646",
+	"647",
+	"649",
+	"650",
+	"651",
+	"656",
+	"657",
+	"658",
+	"659",
+	"660",
+	"661",
+	"662",
+	"664",
+	"667",
+	"669",
+	"670",
+	"671",
+	"672",
+	"678",
+	"680",
+	"681",
+	"682",
+	"683",
+	"684",
+	"689",
+	"701",
+	"702",
+	"703",
+	"704",
+	"705",
+	"706",
+	"707",
+	"708",
+	"709",
+	"712",
+	"713",
+	"714",
+	"715",
+	"716",
+	"717",
+	"718",
+	"719",
+	"720",
+	"721",
+	"724",
+	"725",
+	"726",
+	"727",
+	"731",
+	"732",
+	"734",
+	"737",
+	"740",
+	"742",
+	"743",
+	"747",
+	"753",
+	"754",
+	"757",
+	"758",
+	"760",
+	"762",
+	"763",
+	"765",
+	"767",
+	"769",
+	"770",
+	"771",
+	"772",
+	"773",
+	"774",
+	"775",
+	"778",
+	"779",
+	"780",
+	"781",
+	"782",
+	"784",
+	"785",
+	"786",
+	"787",
+	"801",
+	"802",
+	"803",
+	"804",
+	"805",
+	"806",
+	"807",
+	"808",
+	"809",
+	"810",
+	"812",
+	"813",
+	"814",
+	"815",
+	"816",
+	"817",
+	"818",
+	"819",
+	"820",
+	"825",
+	"826",
+	"828",
+	"829",
+	"830",
+	"831",
+	"832",
+	"838",
+	"839",
+	"840",
+	"843",
+	"845",
+	"847",
+	"848",
+	"849",
+	"850",
+	"854",
+	"856",
+	"857",
+	"858",
+	"859",
+	"860",
+	"862",
+	"863",
+	"864",
+	"865",
+	"867",
+	"868",
+	"869",
+	"870",
+	"872",
+	"873",
+	"876",
+	"878",
+	"901",
+	"902",
+	"903",
+	"904",
+	"905",
+	"906",
+	"907",
+	"908",
+	"909",
+	"910",
+	"912",
+	"913",
+	"914",
+	"915",
+	"916",
+	"917",
+	"918",
+	"919",
+	"920",
+	"925",
+	"928",
+	"929",
+	"930",
+	"931",
+	"934",
+	"936",
+	"937",
+	"938",
+	"939",
+	"940",
+	"941",
+	"943",
+	"945",
+	"947",
+	"948",
+	"949",
+	"951",
+	"952",
+	"954",
+	"956",
+	"959",
+	"970",
+	"971",
+	"972",
+	"973",
+	"978",
+	"979",
+	"980",
+	"983",
+	"984",
+	"985",
+	"986",
+	"989");
+	private final ConditionName validEasyRecogAreaCode=new ConditionName(wsUsPhoneAreaCodeToEdit,"200",
+	"211",
+	"222",
+	"233",
+	"244",
+	"255",
+	"266",
+	"277",
+	"288",
+	"299",
+	"300",
+	"311",
+	"322",
+	"333",
+	"344",
+	"355",
+	"366",
+	"377",
+	"388",
+	"399",
+	"400",
+	"411",
+	"422",
+	"433",
+	"444",
+	"455",
+	"466",
+	"477",
+	"488",
+	"499",
+	"500",
+	"511",
+	"522",
+	"533",
+	"544",
+	"555",
+	"566",
+	"577",
+	"588",
+	"599",
+	"600",
+	"611",
+	"622",
+	"633",
+	"644",
+	"655",
+	"666",
+	"677",
+	"688",
+	"699",
+	"700",
+	"711",
+	"722",
+	"733",
+	"744",
+	"755",
+	"766",
+	"777",
+	"788",
+	"799",
+	"800",
+	"811",
+	"822",
+	"833",
+	"844",
+	"855",
+	"866",
+	"877",
+	"888",
+	"899",
+	"900",
+	"911",
+	"922",
+	"933",
+	"944",
+	"955",
+	"966",
+	"977",
+	"988",
+	"999");
+	
+
+	/**
+	 * Instantiate a new WsUsPhoneAreaCodeToEdit with a default record.
+	 * @param configuration the configuration
+	 */
+	public WsUsPhoneAreaCodeToEdit(Configuration configuration) {
+		super(configuration);
+		setupRoot(root);
+	}
+	/**
+	 * Instantiate a new WsUsPhoneAreaCodeToEdit bound to the provided record.
+	 * @param configuration the configuration
+	 * @param record the existing record to bind
+	 */
+	public WsUsPhoneAreaCodeToEdit(Configuration configuration, RecordAdaptable record) {
+		super(configuration);
+		setupRoot(root, record);
+	}
+
+	/**
+	 * Gets the reference for attribute wsUsPhoneAreaCodeToEdit.
+	 * @return the wsUsPhoneAreaCodeToEdit attribute reference
+	 */
+	public ElementaryRangeReference getWsUsPhoneAreaCodeToEditReference() {
+		return wsUsPhoneAreaCodeToEdit.getReference();
+	}
+
+	/**
+	 * Getter for wsUsPhoneAreaCodeToEdit attribute.
+	 * @return wsUsPhoneAreaCodeToEdit attribute
+	 */
+	public String getWsUsPhoneAreaCodeToEdit() {
+		return wsUsPhoneAreaCodeToEdit.getValue();
+	}
+
+	/**
+	 * Setter for wsUsPhoneAreaCodeToEdit attribute.
+	 * @param wsUsPhoneAreaCodeToEdit the new value of wsUsPhoneAreaCodeToEdit
+	 */
+	public void setWsUsPhoneAreaCodeToEdit(String wsUsPhoneAreaCodeToEdit) {
+		this.wsUsPhoneAreaCodeToEdit.setValue(wsUsPhoneAreaCodeToEdit);
+	}
+	/**
+	 * Gets the reference for attribute validPhoneAreaCode.
+	 * @return the validPhoneAreaCode attribute reference
+	 */
+	public ConditionReference getValidPhoneAreaCodeReference() {
+		return wsUsPhoneAreaCodeToEdit.getCondition(validPhoneAreaCode);	
+	}
+
+	/**
+	 * Getter for validPhoneAreaCode attribute.
+	 * @return validPhoneAreaCode attribute
+	 */
+	public boolean isValidPhoneAreaCode() {
+		return getValidPhoneAreaCodeReference().getValue();	
+	}
+
+	/**
+	 * Setter for validPhoneAreaCode attribute.
+	 * @param validPhoneAreaCode the new value of validPhoneAreaCode
+	 */
+	public void setValidPhoneAreaCode(boolean validPhoneAreaCode) {
+		getValidPhoneAreaCodeReference().setValue(validPhoneAreaCode);	
+	}
+	/**
+	 * Gets the reference for attribute validGeneralPurpCode.
+	 * @return the validGeneralPurpCode attribute reference
+	 */
+	public ConditionReference getValidGeneralPurpCodeReference() {
+		return wsUsPhoneAreaCodeToEdit.getCondition(validGeneralPurpCode);	
+	}
+
+	/**
+	 * Getter for validGeneralPurpCode attribute.
+	 * @return validGeneralPurpCode attribute
+	 */
+	public boolean isValidGeneralPurpCode() {
+		return getValidGeneralPurpCodeReference().getValue();	
+	}
+
+	/**
+	 * Setter for validGeneralPurpCode attribute.
+	 * @param validGeneralPurpCode the new value of validGeneralPurpCode
+	 */
+	public void setValidGeneralPurpCode(boolean validGeneralPurpCode) {
+		getValidGeneralPurpCodeReference().setValue(validGeneralPurpCode);	
+	}
+	/**
+	 * Gets the reference for attribute validEasyRecogAreaCode.
+	 * @return the validEasyRecogAreaCode attribute reference
+	 */
+	public ConditionReference getValidEasyRecogAreaCodeReference() {
+		return wsUsPhoneAreaCodeToEdit.getCondition(validEasyRecogAreaCode);	
+	}
+
+	/**
+	 * Getter for validEasyRecogAreaCode attribute.
+	 * @return validEasyRecogAreaCode attribute
+	 */
+	public boolean isValidEasyRecogAreaCode() {
+		return getValidEasyRecogAreaCodeReference().getValue();	
+	}
+
+	/**
+	 * Setter for validEasyRecogAreaCode attribute.
+	 * @param validEasyRecogAreaCode the new value of validEasyRecogAreaCode
+	 */
+	public void setValidEasyRecogAreaCode(boolean validEasyRecogAreaCode) {
+		getValidEasyRecogAreaCodeReference().setValue(validEasyRecogAreaCode);	
+	}
+}

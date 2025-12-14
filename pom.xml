@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>carddemo</groupId>
+	<artifactId>carddemo-pom</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<spring.boot.version>3.2.5</spring.boot.version>
+		<gapwalk.version>4.2.0</gapwalk.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<modules>
+		<module>carddemo-tools</module>
+		<module>carddemo-entities</module>
+		<module>carddemo-service</module>
+		<!--<module>carddemo-web</module> -->
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.netfective.bluage</groupId>
+				<artifactId>gapwalk.runtime.legacy.statements</artifactId>
+				<version>${gapwalk.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>com.netfective.bluage</groupId>
+				<artifactId>gapwalk-datasimplifier-io-bluesam</artifactId>
+				<version>${gapwalk.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>com.netfective.bluage</groupId>
+				<artifactId>gapwalk-Jics</artifactId>
+				<version>${gapwalk.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-web</artifactId>
+				<version>${spring.boot.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>com.netfective.bluage</groupId>
+				<artifactId>gapwalk-runtime-database-support</artifactId>
+				<version>${gapwalk.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-starter-jdbc</artifactId>
+				<version>${spring.boot.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>com.atomikos</groupId>
+				<artifactId>transactions-spring-boot3-starter</artifactId>
+				<version>6.0.0</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>org.postgresql</groupId>
+				<artifactId>postgresql</artifactId>
+				<version>42.7.2</version>
+				<scope>provided</scope>				
+			</dependency>
+			<dependency>
+				<groupId>com.netfective.bluage</groupId>
+				<artifactId>gapwalk.datasimplifier-io</artifactId>
+				<version>${gapwalk.version}</version>
+				<scope>provided</scope>				
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>

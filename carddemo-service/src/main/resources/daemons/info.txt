@@ -1,0 +1,5 @@
+##############################################################################################################
+# This Folder is used to store deamons scripts. 															 #
+# Put your daemons scripts into this folder before running your application. 								 #
+# All the scripts in this folder will be automatically executed once the application is successfully started #                                                                                     #
+##############################################################################################################

@@ -1,0 +1,488 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "definitions": {
+        "AddComponents": {
+            "description": "This message adds new components to the display and fills their fields",
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "maps": {
+                    "items": {
+                        "$ref": "#/definitions/Map"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "command",
+                "maps"
+            ],
+            "type": "object"
+        },
+        "ArrayField": {
+            "properties": {
+                "attributes": {
+                    "$ref": "#/definitions/Attributes"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "fields": {
+                    "items": {
+                        "$ref": "#/definitions/Map"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "initialCursor": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "Attributes": {
+            "properties": {
+                "allowLC": {
+                    "type": "boolean"
+                },
+                "charsetMode": {
+                    "type": "string"
+                },
+                "chkMsg": {
+                    "items": {
+                        "$ref": "#/definitions/SimpleField"
+                    },
+                    "type": "array"
+                },
+                "color": {
+                    "type": "string"
+                },
+                "column": {
+                    "type": "number"
+                },
+                "columnSeparator": {
+                    "type": "boolean"
+                },
+                "cursor": {
+                    "type": "boolean"
+                },
+                "display": {
+                    "type": "boolean"
+                },
+                "displayControl": {
+                    "type": "boolean"
+                },
+                "dropCommand": {
+                    "type": "string"
+                },
+                "dspMode": {
+                    "type": "string"
+                },
+                "end": {
+                    "type": "boolean"
+                },
+                "foldCommand": {
+                    "type": "string"
+                },
+                "forceModified": {
+                    "type": "boolean"
+                },
+                "highlight": {
+                    "type": "string"
+                },
+                "intensity": {
+                    "type": "string"
+                },
+                "isPassword": {
+                    "type": "boolean"
+                },
+                "line": {
+                    "type": "number"
+                },
+                "mask": {
+                    "type": "string"
+                },
+                "num": {
+                    "type": "string"
+                },
+                "numberOfRecordsPerPage": {
+                    "const": 0,
+                    "type": "number"
+                },
+                "numerical": {
+                    "type": "boolean"
+                },
+                "pageDown": {
+                    "type": "string"
+                },
+                "protection": {
+                    "type": "string"
+                },
+                "size": {
+                    "const": 0,
+                    "type": "number"
+                },
+                "subfileClear": {
+                    "type": "boolean"
+                },
+                "subfileDelete": {
+                    "type": "boolean"
+                },
+                "top": {
+                    "type": "boolean"
+                },
+                "underline": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "column",
+                "line"
+            ],
+            "type": "object"
+        },
+        "Field": {
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/SimpleField"
+                },
+                {
+                    "$ref": "#/definitions/ArrayField"
+                }
+            ]
+        },
+        "LogicalMessage": {
+            "description": "The parent class of all elementary operations, expressed as messages (V7-1103)",
+            "anyOf": [
+                {
+                    "$ref": "#/definitions/AddComponents"
+                },
+                {
+                    "$ref": "#/definitions/WindowComponents"
+                },
+                {
+                    "$ref": "#/definitions/RebindComponents"
+                },
+                {
+                    "$ref": "#/definitions/RemoveAllComponents"
+                },
+                {
+                    "$ref": "#/definitions/SetCursorPosition"
+                },
+                {
+                    "$ref": "#/definitions/UpdateTableComponents"
+                }
+            ]
+        },
+        "Map": {
+            "properties": {
+                "actionKeys": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "clearLines": {
+                    "type": "string"
+                },
+                "component": {
+                    "type": "string"
+                },
+                "cursorColumn": {
+                    "type": "number"
+                },
+                "cursorLine": {
+                    "type": "number"
+                },
+                "dspMode": {
+                    "type": "string"
+                },
+                "fields": {
+                    "items": {
+                        "$ref": "#/definitions/Field"
+                    },
+                    "type": "array"
+                },
+                "mapWidth": {
+                    "type": "number"
+                },
+                "overlay": {
+                    "type": "boolean"
+                },
+                "startLineNumber": {
+                    "default": 0,
+                    "type": "number"
+                }
+            },
+            "required": [
+                "component",
+                "fields",
+                "mapWidth"
+            ],
+            "type": "object"
+        },
+        "RebindComponents": {
+            "description": "This message update fields of some already displayed components",
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "maps": {
+                    "items": {
+                        "$ref": "#/definitions/Map"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "command",
+                "maps"
+            ],
+            "type": "object"
+        },
+        "RemoveAllComponents": {
+            "description": "This message removes all displayed components",
+            "properties": {
+                "command": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "command"
+            ],
+            "type": "object"
+        },
+        "SetCursorPosition": {
+            "description": "This message set cursor position",
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "cursor": {
+                    "type": "number"
+                }
+            },
+            "required": [
+                "command",
+                "cursor"
+            ],
+            "type": "object"
+        },
+        "SimpleField": {
+            "properties": {
+                "attributes": {
+                    "$ref": "#/definitions/Attributes"
+                },
+                "data": {
+                    "type": "string"
+                },
+                "fields": {
+                    "items": {
+                        "$ref": "#/definitions/Map"
+                    },
+                    "type": "array"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "initialCursor": {
+                    "type": "boolean"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "type": "object"
+        },
+        "UpdateTableComponents": {
+            "description": "This message synchronizes Data for a table",
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "maps": {
+                    "items": {
+                        "$ref": "#/definitions/Map"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "command",
+                "maps"
+            ],
+            "type": "object"
+        },
+        "WindowComponents": {
+            "description": "This message adds new components to the display into modal window",
+            "properties": {
+                "command": {
+                    "type": "string"
+                },
+                "maps": {
+                    "items": {
+                        "$ref": "#/definitions/WindowMap"
+                    },
+                    "type": "array"
+                }
+            },
+            "required": [
+                "command",
+                "maps"
+            ],
+            "type": "object"
+        },
+        "WindowMap": {
+            "properties": {
+                "actionKeys": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "type": "array"
+                },
+                "border": {
+                    "type": "boolean"
+                },
+                "borderBottom": {
+                    "type": "string"
+                },
+                "borderColor": {
+                    "type": "string"
+                },
+                "borderDashed": {
+                    "type": "boolean"
+                },
+                "borderHilight": {
+                    "type": "string"
+                },
+                "borderIntensity": {
+                    "type": "string"
+                },
+                "borderTop": {
+                    "type": "string"
+                },
+                "clearLines": {
+                    "type": "string"
+                },
+                "component": {
+                    "type": "string"
+                },
+                "cursorColumn": {
+                    "type": "number"
+                },
+                "cursorLine": {
+                    "type": "number"
+                },
+                "cursorPosition": {
+                    "type": "boolean"
+                },
+                "dspMode": {
+                    "type": "string"
+                },
+                "fields": {
+                    "items": {
+                        "$ref": "#/definitions/Field"
+                    },
+                    "type": "array"
+                },
+                "height": {
+                    "type": "number"
+                },
+                "mapWidth": {
+                    "type": "number"
+                },
+                "messageLine": {
+                    "type": "boolean"
+                },
+                "overlay": {
+                    "type": "boolean"
+                },
+                "positionLeft": {
+                    "type": "number"
+                },
+                "positionTop": {
+                    "type": "number"
+                },
+                "remove": {
+                    "type": "boolean"
+                },
+                "startLineNumber": {
+                    "default": 0,
+                    "type": "number"
+                },
+                "titleAlignBottom": {
+                    "type": "string"
+                },
+                "titleAlignTop": {
+                    "type": "string"
+                },
+                "titleBottom": {
+                    "type": "string"
+                },
+                "titleColorBottom": {
+                    "type": "string"
+                },
+                "titleColorTop": {
+                    "type": "string"
+                },
+                "titleTop": {
+                    "type": "string"
+                },
+                "width": {
+                    "type": "number"
+                },
+                "windowRef": {
+                    "additionalProperties": false,
+                    "patternProperties": {
+                        "^[0-9]+$": {
+                            "type": "string"
+                        }
+                    },
+                    "properties": {
+                        "length": {
+                            "type": "number"
+                        }
+                    },
+                    "required": [
+                        "length"
+                    ],
+                    "type": "object"
+                }
+            },
+            "required": [
+                "component",
+                "fields",
+                "mapWidth"
+            ],
+            "type": "object"
+        }
+    },
+    "properties": {
+        "error": {
+            "type": "string"
+        },
+        "messages": {
+            "items": {
+                "$ref": "#/definitions/LogicalMessage"
+            },
+            "type": "array"
+        },
+        "nextTransID": {
+            "type": "string"
+        },
+        "serverDescription": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "messages"
+    ],
+    "type": "object"
+}
+

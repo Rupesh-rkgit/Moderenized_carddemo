@@ -1,0 +1,39 @@
+#############################################################################################################
+# In legacy, there is no specific identified mechanism enabling to target database according query so       #
+# in the case where your program need to query several databases use this file to specify                   #
+# the database on which query have to be executed.                                                          #
+#                                                                                                           #
+# This file provides a mapping between the queries and :                                                    #
+#                                                                                                           #
+# [datasource name]                                                                                         #
+# the database (name of the data source) on which the queries are executed.                                 #
+#                                                                                                           #
+# In the following cases, the query will be executed on the default database (primary):                     #
+# - If the entry is empty                                                                                   #
+# - If the request has no corresponding entry in this file                                                  #
+# - If this file does not exist(, and no specific datasource have been provided into your ProgramContainer) #
+#                                                                                                           #
+# [savepoint]                                                                                               #
+# To true, the flag enabling to create a save point before executing the query in order to restore it on    #
+# SQL exception. For now, only INSERT are considered and only Postgres -803 Duplication Key exception will  #
+# restore the save point.                                                                                   #
+# In the following cases, the query will be executed on the default database (primary):                     #
+# - If the entry is empty                                                                                   #
+# - If the request has no corresponding entry in this file                                                  #
+# - If this file does not exist(, and no specific datasource have been provided into your ProgramContainer) #
+#                                                                                                           #
+# [AS400]                                                                                                   #
+# To true, the flag enabling to indicate the AS400 context for that query in order to perform rewritings    #
+#                                                                                                           #
+# Format :                                                                                                  #
+# -------                                                                                                   #
+#[sql-query-id]=[datasource name],[savepoint],[as400]                                                       #
+#                                                                                                           #
+# For example :                                                                                             #
+# -------------                                                                                             #
+#myProg_1=                                                                                                  #
+#myProg_2=aeat2                                                                                             #
+#myProg_3=aeat2,true                                                                                        #
+#myProg_4=,true                                                                                             #
+#myProg_5=,,true                                                                                            #
+#############################################################################################################

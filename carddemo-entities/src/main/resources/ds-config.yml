@@ -1,0 +1,150 @@
+files:
+
+#####  Context : Cbact04cContext #####
+
+#  TCATBALF:
+#    provider: Bluesam
+#    dataset : TCATBAL-FILE # generated from legacy, check correctness
+
+#  XREFFILE:
+#    provider: Bluesam
+#    dataset : XREF-FILE # generated from legacy, check correctness
+
+#  DISCGRP:
+#    provider: Bluesam
+#    dataset : DISCGRP-FILE # generated from legacy, check correctness
+
+#  ACCTFILE:
+#    provider: Bluesam
+#    dataset : ACCOUNT-FILE # generated from legacy, check correctness
+
+#  TRANSACT:
+#    dataset: TRANSACT-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#####  Context : Cbstm03aContext #####
+
+#  STMTFILE:
+#    dataset: STMT-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#  HTMLFILE:
+#    dataset: HTML-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#####  Context : Cbstm03bContext #####
+
+#  TRNXFILE:
+#    provider: Bluesam
+#    dataset : TRNX-FILE # generated from legacy, check correctness
+
+#  XREFFILE:
+#    provider: Bluesam
+#    dataset : XREF-FILE # generated from legacy, check correctness
+
+#  CUSTFILE:
+#    provider: Bluesam
+#    dataset : CUST-FILE # generated from legacy, check correctness
+
+#  ACCTFILE:
+#    provider: Bluesam
+#    dataset : ACCT-FILE # generated from legacy, check correctness
+
+#####  Context : Cbtrn02cContext #####
+
+#  DALYTRAN:
+#    dataset: DALYTRAN-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#  TRANFILE:
+#    provider: Bluesam
+#    dataset : TRANSACT-FILE # generated from legacy, check correctness
+
+#  XREFFILE:
+#    provider: Bluesam
+#    dataset : XREF-FILE # generated from legacy, check correctness
+
+#  DALYREJS:
+#    dataset: DALYREJS-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#  ACCTFILE:
+#    provider: Bluesam
+#    dataset : ACCOUNT-FILE # generated from legacy, check correctness
+
+#  TCATBALF:
+#    provider: Bluesam
+#    dataset : TCATBAL-FILE # generated from legacy, check correctness
+
+#####  Context : Cbtrn03cContext #####
+
+#  TRANFILE:
+#    dataset: TRANSACT-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#  CARDXREF:
+#    provider: Bluesam
+#    dataset : XREF-FILE # generated from legacy, check correctness
+
+#  TRANTYPE:
+#    provider: Bluesam
+#    dataset : TRANTYPE-FILE # generated from legacy, check correctness
+
+#  TRANCATG:
+#    provider: Bluesam
+#    dataset : TRANCATG-FILE # generated from legacy, check correctness
+
+#  TRANREPT:
+#    dataset: REPORT-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#  DATEPARM:
+#    dataset: DATE-PARMS-FILE # generated from legacy, check correctness
+#    provider: Bluesam
+
+#####  Context : CoactupcContext #####
+
+#####  Context : CoactvwcContext #####
+
+#####  Context : Coadm01cContext #####
+
+#####  Context : Cobil00cContext #####
+
+#####  Context : CocrdlicContext #####
+
+#####  Context : CocrdslcContext #####
+
+#####  Context : CocrdupcContext #####
+
+#####  Context : Comen01cContext #####
+
+#####  Context : Corpt00cContext #####
+
+#####  Context : Cosgn00cContext #####
+
+#####  Context : Cotrn00cContext #####
+
+#####  Context : Cotrn01cContext #####
+
+#####  Context : Cotrn02cContext #####
+
+#####  Context : Cousr00cContext #####
+
+#####  Context : Cousr01cContext #####
+
+#####  Context : Cousr02cContext #####
+
+#####  Context : Cousr03cContext #####
+
+#####  Context : CsutldtcContext #####
+
+# Datasources descriptions. Each datasource contains following parameters :
+# name : the datasource identifier (if null or empty, set as default datasource)
+# driver : the driver to use (mandatory)
+# url : the url (mandatory)
+# urlSuffix : the url suffix (optional)
+
+datasources:
+
+# Programs descriptions. Each program can define it's own datasources or refer to "datasources:".
+programs:
